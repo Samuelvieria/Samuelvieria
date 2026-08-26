@@ -7,7 +7,7 @@
 
 <br/>
 
-<a href="https://www.linkedin.com/in/SEU-USUARIO">
+<a href="https://www.linkedin.com/in/samuelfalvesvieira">
   <img src="https://img.shields.io/badge/LinkedIn-Conectar-0B6B8F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:samuelalvesvieira39@gmail.com">
@@ -144,7 +144,7 @@ Aberto a oportunidades em **desenvolvimento de software, IoT e dados**. Se o pro
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/SEU-USUARIO">
+<a href="https://www.linkedin.com/in/samuelfalvesvieira">
   <img src="https://img.shields.io/badge/Chamar%20no%20LinkedIn-0B6B8F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:samuelalvesvieira39@gmail.com">
