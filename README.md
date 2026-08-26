@@ -23,85 +23,22 @@
 
 ## Sobre
 
-Estudante de **Ciência da Computação na PUC Minas** e desenvolvedor na
-**[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)**, onde trabalho com
-**IoT e monitoramento geotécnico** — piezômetros, células de carga e crackmeters
-instalados em campo.
+Estudante de **Ciência da Computação na PUC Minas**. Na
+**[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)** trabalho com IoT e
+monitoramento geotécnico: desenvolvo a ingestão de telemetria dos sensores em campo e
+atuo no desenvolvimento do **TWMonitor**, a plataforma de monitoramento construída
+sobre ThingsBoard, onde implemento rule chains, alarmes e dashboards.
 
-Atuo nas duas pontas da cadeia. Na entrada, o **TWBridge**: a ferramenta que lê o
-arquivo bruto do sensor e o entrega ao broker sem perder medição. Na saída, o
-**TWMonitor**, plataforma **white-label** da empresa construída sobre o motor do
-**ThingsBoard PE** — onde eu construo as **rule chains** que processam e roteiam
-a telemetria, os **alarmes** por limiar e os **dashboards** que o cliente usa.
+Fora disso, construo o que me interessa — e é onde passo o tempo que sobra: um globo 3D
+que digere livros de história, um app offline-first para oficina mecânica, um sistema de
+análise financeira sem uma única dependência externa.
 
-É um domínio onde perder uma medição não é bug cosmético — é um dado de segurança
-que deixou de existir. Essa restrição moldou como eu escrevo software.
-
-<br/>
-
-## Do sensor ao painel
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/pipeline-dark.svg">
-  <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor em campo, ingestão pelo TWBridge, broker MQTT e a plataforma TWMonitor sobre ThingsBoard PE, com rule chains, alarmes e dashboards. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
-</picture>
-
-Duas coisas neste desenho são o meu trabalho.
-
-A primeira é o **caminho tracejado**: quando a rede cai, as medições vão para uma
-fila em disco e são reenviadas sozinhas ao reconectar. Sem ele, cada instabilidade
-de conexão vira um buraco permanente na série temporal. Com ele, vira um atraso.
-
-A segunda é o que está **dentro do TWMonitor**. O ThingsBoard entrega o motor;
-a lógica que transforma leitura crua em informação útil — qual regra dispara qual
-alarme, como a telemetria é roteada e enriquecida, o que o cliente enxerga no
-painel — é construída por cima, e é aí que fica a maior parte do meu dia.
+O que atravessa tudo é um gosto por software que continua correto quando as condições
+não são ideais.
 
 <br/>
 
-## Stack
-
-<div align="center">
-
-**Linguagens**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-**Frameworks**
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
-**IoT, nuvem & dados**
-
-![MQTT](https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white)
-![ThingsBoard](https://img.shields.io/badge/ThingsBoard-2F4F7F?style=for-the-badge&logo=thingsboard&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Locust](https://img.shields.io/badge/Locust-0B6B8F?style=for-the-badge&logo=locust&logoColor=white)
-
-**Ferramentas**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
-</div>
-
-<br/>
-
-## Projetos em destaque
+## Projetos
 
 <table>
 <tr>
@@ -134,26 +71,22 @@ Trabalho interdisciplinar em equipe de 6, em repositório fechado da PUC Minas.
 <tr>
 <td width="50%" valign="top">
 
-### 📡 TWBridge + TWMonitor
-**Python · MQTT · ThingsBoard PE** · 🔒 trabalho interno
-
-O diagrama acima, em produção na Tecwise Latam.
-
-**TWBridge** — lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Empacotado como instalador Windows para equipe de campo.
-
-**TWMonitor** — plataforma white-label sobre o motor do ThingsBoard PE, onde construo as **rule chains**, os **alarmes** por limiar e os **dashboards** entregues ao cliente.
-
-`mqtt` · `iot` · `rule-chains` · `dashboards`
-
-</td>
-<td width="50%" valign="top">
-
 ### 💰 Análise Financeira Empresarial
 **Python (stdlib pura) · SQLite** · 🔒 privado
 
 Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e apura **DRE, fluxo de caixa, depreciação, ponto de equilíbrio e Simples Nacional**. Aritmética em **centavos inteiros** — rateio sem perder um centavo. Zero dependências externas.
 
 `fintech` · `ofx` · `contabilidade` · `zero-deps`
+
+</td>
+<td width="50%" valign="top">
+
+### 🎬 VideosAut — pipeline de conteúdo
+**Python · TTS · automação**
+
+Pipeline por fases para produção de vídeo: roteiro, síntese de voz e render. Construído deliberadamente de trás pra frente — os primeiros vídeos são feitos à mão para descobrir o que funciona **antes** de automatizar qualquer etapa.
+
+[![Repo](https://img.shields.io/badge/Ver_o_código-0B6B8F?style=flat-square&logo=github&logoColor=white)](https://github.com/Samuelvieria/VideosAut)
 
 </td>
 </tr>
@@ -170,14 +103,38 @@ Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e
 | [**BD**](https://github.com/Samuelvieria/BD) | Modelagem relacional em MySQL e interface de acervo |
 
 <div align="center">
-<sub>Os projetos marcados com 🔒 envolvem dados de clientes, trabalho interno ou repositório fechado da universidade. Posso apresentá-los em conversa.</sub>
+<sub>Os projetos marcados com 🔒 envolvem dados de clientes ou repositório fechado da universidade. Posso apresentá-los em conversa.</sub>
 </div>
 
 <br/>
 
-## Contato
+## Stack
 
-Aberto a oportunidades em **desenvolvimento de software, IoT e dados**. Se o problema envolve dado que não pode se perder, é o tipo de coisa que eu gosto.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg">
+  <img src="./assets/stack-light.svg" alt="Stack: Python, TypeScript, Java, JavaScript, Dart, C++, SQL · React, Three.js, Vite, Flutter, HTML/CSS · MQTT, ThingsBoard, SQLite, Firebase, Azure, Locust · Git, Linux, Docker, PyInstaller, Figma" width="100%">
+</picture>
+
+<br/>
+
+## Um problema que eu gosto
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/pipeline-dark.svg">
+  <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor, ingestão, broker MQTT e ThingsBoard com rule chains, alarmes e dashboards. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
+</picture>
+
+Sensor em campo, rede instável. O caminho sólido é o dia bom; o tracejado é o que
+importa: **quando a conexão cai, a medição vai para uma fila em disco e é reenviada
+sozinha ao reconectar.**
+
+Sem isso, cada instabilidade vira um buraco permanente na série temporal. Com isso,
+vira um atraso. A diferença entre as duas parece pequena no código e é enorme para
+quem depende do dado.
+
+<br/>
+
+## Contato
 
 <div align="center">
 

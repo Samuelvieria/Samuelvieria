@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 384" width="1200" height="384" role="img" aria-label="Do sensor em campo ao painel: sensor, ingestao pelo TWBridge, broker MQTT e a plataforma TWMonitor sobre ThingsBoard PE, onde ficam as rule chains, os alarmes e os dashboards. Se a rede cai, as medicoes vao para uma fila em disco e sao reenviadas ao reconectar.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 384" width="1200" height="384" role="img" aria-label="Do sensor em campo ao painel: sensor, ingestao, broker MQTT e ThingsBoard, onde ficam as rule chains, os alarmes e os dashboards. Se a rede cai, as medicoes vao para uma fila em disco e sao reenviadas ao reconectar.">
 <title>Do sensor em campo ao painel — ingestão, fila offline e a plataforma</title>
 <rect width="1200" height="384" fill="#F1F4F7"/>
 <defs>
@@ -11,7 +11,7 @@
 <text x="76" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8494A1">piezômetro · crackmeter</text>
 <rect x="350" y="54" width="205" height="80" fill="#FFFFFF" stroke="#D3DBE3" stroke-width="1"/>
 <rect x="350" y="54" width="3" height="80" fill="#0B6B8F"/>
-<text x="370" y="87" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="1.5" fill="#111A24">TWBRIDGE</text>
+<text x="370" y="87" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="1.5" fill="#111A24">INGESTÃO</text>
 <text x="370" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8494A1">lê .dat → converte JSON</text>
 <rect x="644" y="54" width="205" height="80" fill="#FFFFFF" stroke="#D3DBE3" stroke-width="1"/>
 <rect x="644" y="54" width="3" height="80" fill="#0B6B8F"/>
@@ -19,8 +19,8 @@
 <text x="664" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8494A1">TLS · porta 8883</text>
 <rect x="938" y="54" width="205" height="252" fill="#FFFFFF" stroke="#0B6B8F" stroke-width="1.5"/>
 <rect x="938" y="54" width="3" height="252" fill="#0B6B8F"/>
-<text x="958" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="1.5" fill="#0B6B8F">TWMONITOR</text>
-<text x="958" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8494A1">white-label · ThingsBoard PE</text>
+<text x="958" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="1.5" fill="#0B6B8F">THINGSBOARD</text>
+<text x="958" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8494A1">motor de telemetria</text>
 <rect x="952" y="120" width="177" height="48" fill="#F1F4F7" stroke="#D3DBE3" stroke-width="1"/>
 <text x="964" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.1" fill="#111A24">RULE CHAINS</text>
 <text x="964" y="157" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8494A1">processa e roteia</text>
@@ -44,5 +44,5 @@
 <path d="M706,223.0 H746.5 V142" fill="none" stroke="#0B6B8F" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ac)"/>
 <text x="760.5" y="213.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" letter-spacing="0.6" fill="#0B6B8F">reenvia ao reconectar</text>
 <line x1="56" y1="352" x2="1144" y2="352" stroke="#D3DBE3" stroke-width="1"/>
-<text x="56" y="370" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.4" fill="#8494A1">INGEST&#195;O EM PYTHON · PLATAFORMA SOBRE THINGSBOARD PE · MONITORAMENTO GEOT&#201;CNICO</text>
+<text x="56" y="370" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.4" fill="#8494A1">TELEMETRIA DE SENSORES · PYTHON · MQTT · TLS · THINGSBOARD</text>
 </svg>
