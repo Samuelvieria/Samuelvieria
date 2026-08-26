@@ -23,20 +23,39 @@
 
 ## Sobre
 
-Estudante de **Ciência da Computação na PUC Minas** e desenvolvedor na **[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)**, onde trabalho com **IoT e monitoramento geotécnico** — piezômetros, células de carga e crackmeters instalados em campo.
+Estudante de **Ciência da Computação na PUC Minas** e desenvolvedor na
+**[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)**, onde trabalho com
+**IoT e monitoramento geotécnico** — piezômetros, células de carga e crackmeters
+instalados em campo.
 
-Meu trabalho é a cadeia inteira do dado: do sensor até o dashboard, passando por ingestão, MQTT e a infraestrutura em nuvem que sustenta tudo. É um domínio onde perder uma medição não é um bug cosmético — é um dado de segurança que deixou de existir. Essa restrição moldou como eu escrevo software.
+Atuo nas duas pontas da cadeia. Na entrada, o **TWBridge**: a ferramenta que lê o
+arquivo bruto do sensor e o entrega ao broker sem perder medição. Na saída, o
+**TWMonitor**, plataforma **white-label** da empresa construída sobre o motor do
+**ThingsBoard PE** — onde eu construo as **rule chains** que processam e roteiam
+a telemetria, os **alarmes** por limiar e os **dashboards** que o cliente usa.
+
+É um domínio onde perder uma medição não é bug cosmético — é um dado de segurança
+que deixou de existir. Essa restrição moldou como eu escrevo software.
 
 <br/>
 
-## O que isso significa na prática
+## Do sensor ao painel
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/pipeline-dark.svg">
-  <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor em campo, ingestão, broker MQTT e dashboard. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
+  <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor em campo, ingestão pelo TWBridge, broker MQTT e a plataforma TWMonitor sobre ThingsBoard PE, com rule chains, alarmes e dashboards. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
 </picture>
 
-O caminho sólido é o dia bom. O caminho tracejado é o que me interessa: **quando a rede cai, as medições vão para uma fila em disco e são reenviadas sozinhas ao reconectar.** Sem ele, cada instabilidade de conexão vira um buraco permanente na série temporal. Com ele, vira um atraso.
+Duas coisas neste desenho são o meu trabalho.
+
+A primeira é o **caminho tracejado**: quando a rede cai, as medições vão para uma
+fila em disco e são reenviadas sozinhas ao reconectar. Sem ele, cada instabilidade
+de conexão vira um buraco permanente na série temporal. Com ele, vira um atraso.
+
+A segunda é o que está **dentro do TWMonitor**. O ThingsBoard entrega o motor;
+a lógica que transforma leitura crua em informação útil — qual regra dispara qual
+alarme, como a telemetria é roteada e enriquecida, o que o cliente enxerga no
+painel — é construída por cima, e é aí que fica a maior parte do meu dia.
 
 <br/>
 
@@ -115,12 +134,16 @@ Trabalho interdisciplinar em equipe de 6, em repositório fechado da PUC Minas.
 <tr>
 <td width="50%" valign="top">
 
-### 📡 TWBridge — telemetria confiável
-**Python · MQTT · Tkinter · PyInstaller** · 🔒 privado
+### 📡 TWBridge + TWMonitor
+**Python · MQTT · ThingsBoard PE** · 🔒 trabalho interno
 
-O pipeline do diagrama acima, em produção na Tecwise Latam. Lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Distribuído como instalador Windows para equipe de campo.
+O diagrama acima, em produção na Tecwise Latam.
 
-`mqtt` · `iot` · `fila-offline` · `desktop`
+**TWBridge** — lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Empacotado como instalador Windows para equipe de campo.
+
+**TWMonitor** — plataforma white-label sobre o motor do ThingsBoard PE, onde construo as **rule chains**, os **alarmes** por limiar e os **dashboards** entregues ao cliente.
+
+`mqtt` · `iot` · `rule-chains` · `dashboards`
 
 </td>
 <td width="50%" valign="top">
