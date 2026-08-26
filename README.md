@@ -81,12 +81,14 @@ Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e
 </td>
 <td width="50%" valign="top">
 
-### 🎬 VideosAut — pipeline de conteúdo
-**Python · TTS · automação**
+### 📡 TWBridge — telemetria confiável
+**Python · MQTT · Tkinter · PyInstaller** · 🔒 privado
 
-Pipeline por fases para produção de vídeo: roteiro, síntese de voz e render. Construído deliberadamente de trás pra frente — os primeiros vídeos são feitos à mão para descobrir o que funciona **antes** de automatizar qualquer etapa.
+Projeto meu, de ponta a ponta, hoje em produção. Lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS — e **enfileira em disco quando a rede cai**, reenviando sozinho ao reconectar.
 
-[![Repo](https://img.shields.io/badge/Ver_o_código-0B6B8F?style=flat-square&logo=github&logoColor=white)](https://github.com/Samuelvieria/VideosAut)
+Empacotado como instalador Windows, com execução em bandeja e inicialização automática, para rodar em máquina de campo sem ninguém técnico por perto.
+
+`mqtt` · `iot` · `fila-offline` · `desktop`
 
 </td>
 </tr>
@@ -101,9 +103,10 @@ Pipeline por fases para produção de vídeo: roteiro, síntese de voz e render.
 | [**DIW**](https://github.com/Samuelvieria/DIW) | Front-end de e-commerce em JS puro consumindo API REST |
 | [**ACI**](https://github.com/Samuelvieria/ACI) | Circuitos digitais em Verilog |
 | [**BD**](https://github.com/Samuelvieria/BD) | Modelagem relacional em MySQL e interface de acervo |
+| [**VideosAut**](https://github.com/Samuelvieria/VideosAut) | Pipeline de produção de vídeo por fases — roteiro, TTS e render |
 
 <div align="center">
-<sub>Os projetos marcados com 🔒 envolvem dados de clientes ou repositório fechado da universidade. Posso apresentá-los em conversa.</sub>
+<sub>Os projetos marcados com 🔒 envolvem ferramenta interna, dados de clientes ou repositório fechado da universidade. Posso apresentá-los em conversa.</sub>
 </div>
 
 <br/>
@@ -124,13 +127,24 @@ Pipeline por fases para produção de vídeo: roteiro, síntese de voz e render.
   <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor, ingestão, broker MQTT e ThingsBoard com rule chains, alarmes e dashboards. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
 </picture>
 
-Sensor em campo, rede instável. O caminho sólido é o dia bom; o tracejado é o que
-importa: **quando a conexão cai, a medição vai para uma fila em disco e é reenviada
-sozinha ao reconectar.**
+Um piezômetro instalado numa estrutura monitorada mede pressão e deslocamento. O dado sai dele como
+arquivo bruto, atravessa uma rede que nem sempre existe, e precisa chegar íntegro do
+outro lado. O caminho sólido acima é o dia bom.
 
-Sem isso, cada instabilidade vira um buraco permanente na série temporal. Com isso,
-vira um atraso. A diferença entre as duas parece pequena no código e é enorme para
-quem depende do dado.
+O tracejado é onde mora o problema — e é o que o **TWBridge** resolve.
+
+Sem fila, uma queda de conexão de dez minutos não é um atraso de dez minutos: é um
+buraco permanente na série temporal, porque a medição daquele instante não existe em
+lugar nenhum e não vai voltar. Numa aplicação de monitoramento estrutural, o dado
+ausente é exatamente o que ninguém pode ter.
+
+Então a ferramenta grava em disco antes de tentar publicar, e só considera entregue o
+que o broker confirmou. Rede cai, a fila cresce; rede volta, a fila drena sozinha.
+**Buraco permanente vira atraso** — e essa troca é o projeto inteiro.
+
+O resto foi consequência de quem usa: instalador Windows, execução em bandeja e
+inicialização automática, porque quem liga a máquina em campo não vai abrir terminal
+para rodar script.
 
 <br/>
 
