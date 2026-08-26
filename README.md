@@ -1,42 +1,46 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,45:1F6FEB,100:2EA043&height=210&section=header&text=Samuel%20Alves%20Vieira&fontSize=44&fontColor=FFFFFF&fontAlignY=33&desc=Desenvolvedor%20de%20Software%20%E2%80%A2%20IoT%20%26%20Dados%20de%20Sensores&descAlignY=53&descSize=17&animation=fadeIn" width="100%" alt="Samuel Alves Vieira" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
+  <img src="./assets/banner-light.svg" alt="Samuel Alves Vieira — Desenvolvedor de Software · IoT e Telemetria" width="100%">
+</picture>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=21&pause=1200&color=1F6FEB&center=true&vCenter=true&width=680&lines=Python+%C2%B7+React+%C2%B7+Flutter+%C2%B7+Java;IoT%2C+MQTT+e+monitoramento+geot%C3%A9cnico;Do+sensor+em+campo+at%C3%A9+o+dashboard" alt="Stack" />
-
-<br/><br/>
+<br/>
 
 <a href="https://www.linkedin.com/in/SEU-USUARIO">
-  <img src="https://img.shields.io/badge/LinkedIn-Conectar-1F6FEB?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LinkedIn-Conectar-0B6B8F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:samuelalvesvieira39@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Falar%20comigo-2EA043?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <img src="https://img.shields.io/badge/Email-Falar%20comigo-12705A?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
 </a>
 <a href="https://github.com/Samuelvieria?tab=repositories">
-  <img src="https://img.shields.io/badge/Projetos-Ver%20todos-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="Repositórios" />
+  <img src="https://img.shields.io/badge/Projetos-Ver%20todos-0B1219?style=for-the-badge&logo=github&logoColor=white" alt="Repositórios">
 </a>
 
 </div>
 
 <br/>
 
-## 👋 Sobre mim
+## Sobre
 
-Estudante de **Ciência da Computação na PUC Minas** e desenvolvedor na **[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)**, onde trabalho com **IoT e monitoramento geotécnico** — a cadeia inteira: sensor em campo → ingestão → MQTT → dashboard → infraestrutura em nuvem.
+Estudante de **Ciência da Computação na PUC Minas** e desenvolvedor na **[Tecwise Latam](https://br.linkedin.com/company/tecwiselatam)**, onde trabalho com **IoT e monitoramento geotécnico** — piezômetros, células de carga e crackmeters instalados em campo.
 
-Gosto de software que resolve um problema concreto de quem usa. Os projetos aqui refletem isso: automação de envio de telemetria que não perde medição quando a rede cai, app offline-first para oficina mecânica que sincroniza sozinho quando volta o sinal, e análise financeira que fecha DRE sem errar um centavo.
-
-```yaml
-localizacao:  Minas Gerais, Brasil
-formacao:     Ciência da Computação — PUC Minas
-atuacao:      IoT · Telemetria · Full-Stack
-foco_atual:   Sistemas distribuídos de sensores e confiabilidade de dados
-idiomas:      Português (nativo) · Inglês (técnico)
-```
+Meu trabalho é a cadeia inteira do dado: do sensor até o dashboard, passando por ingestão, MQTT e a infraestrutura em nuvem que sustenta tudo. É um domínio onde perder uma medição não é um bug cosmético — é um dado de segurança que deixou de existir. Essa restrição moldou como eu escrevo software.
 
 <br/>
 
-## 🛠️ Stack
+## O que isso significa na prática
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/pipeline-dark.svg">
+  <img src="./assets/pipeline-light.svg" alt="Pipeline de telemetria: sensor em campo, ingestão, broker MQTT e dashboard. Quando a rede cai, as medições vão para uma fila em disco e são reenviadas ao reconectar." width="100%">
+</picture>
+
+O caminho sólido é o dia bom. O caminho tracejado é o que me interessa: **quando a rede cai, as medições vão para uma fila em disco e são reenviadas sozinhas ao reconectar.** Sem ele, cada instabilidade de conexão vira um buraco permanente na série temporal. Com ele, vira um atraso.
+
+<br/>
+
+## Stack
 
 <div align="center">
 
@@ -50,7 +54,7 @@ idiomas:      Português (nativo) · Inglês (técnico)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**Frameworks & Bibliotecas**
+**Frameworks**
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
@@ -58,14 +62,14 @@ idiomas:      Português (nativo) · Inglês (técnico)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-**IoT, Nuvem & Dados**
+**IoT, nuvem & dados**
 
 ![MQTT](https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white)
 ![ThingsBoard](https://img.shields.io/badge/ThingsBoard-2F4F7F?style=for-the-badge&logo=thingsboard&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Locust](https://img.shields.io/badge/Locust-1F6FEB?style=for-the-badge&logo=locust&logoColor=white)
+![Locust](https://img.shields.io/badge/Locust-0B6B8F?style=for-the-badge&logo=locust&logoColor=white)
 
 **Ferramentas**
 
@@ -78,50 +82,50 @@ idiomas:      Português (nativo) · Inglês (técnico)
 
 <br/>
 
-## 🚀 Projetos em destaque
+## Projetos em destaque
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🔧 Screw — Gestão para oficinas
+### Screw — gestão para oficinas
 **Flutter · Firebase · SQLite · Azure Vision**
 
 App mobile **offline-first** para oficinas mecânicas: clientes, veículos, ordens de serviço e orçamentos em PDF. Grava local no SQLite e sincroniza sozinho com o Firestore quando a conexão volta. Inclui **leitura de placa por câmera (OCR)**.
 
-`offline-first` `sync` `ocr` `pdf`
+`offline-first` · `sync` · `ocr` · `pdf`
 
 </td>
 <td width="50%" valign="top">
 
-### 🌍 Globo Histórico Interativo
+### Globo Histórico Interativo
 **React 19 · TypeScript · Three.js · Python**
 
 Globo 3D navegável onde eventos históricos viram pontos clicáveis. Navegação hierárquica **mundo → continente → país → estado** com nível de detalhe progressivo, timeline de duas alças e tiles da NASA GIBS. Pipeline próprio de **extração de entidades (NER)** para popular a base.
 
-`three.js` `lod` `nlp` `dataviz`
+`three.js` · `lod` · `nlp` · `dataviz`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 📡 tecWise Link — Telemetria confiável
+### tecWise Link — telemetria confiável
 **Python · MQTT · Tkinter · PyInstaller**
 
-Automatiza o envio de dados de sensores para o ThingsBoard: lê o arquivo bruto, converte para JSON e publica via MQTT/TLS. Se a rede cai, **enfileira em disco e reenvia sozinho** — nenhuma medição se perde. Distribuído como instalador Windows.
+O pipeline do diagrama acima, em produção. Lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Distribuído como instalador Windows para equipe de campo.
 
-`mqtt` `iot` `fila-offline` `desktop`
+`mqtt` · `iot` · `fila-offline` · `desktop`
 
 </td>
 <td width="50%" valign="top">
 
-### 💰 AnaliseJoaz — Análise financeira
+### AnaliseJoaz — análise financeira
 **Python (stdlib pura) · SQLite**
 
 Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e apura **DRE, fluxo de caixa, depreciação, ponto de equilíbrio e Simples Nacional**. Aritmética em **centavos inteiros** — rateio sem perder um centavo. Zero dependências externas.
 
-`fintech` `ofx` `contabilidade` `zero-deps`
+`fintech` · `ofx` · `contabilidade` · `zero-deps`
 
 </td>
 </tr>
@@ -133,36 +137,17 @@ Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e
 
 <br/>
 
-## 📊 GitHub
+## Contato
 
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Samuelvieria&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=1F6FEB&icon_color=2EA043&text_color=8B949E&bg_color=0D1117" alt="Estatísticas" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Samuelvieria&layout=compact&langs_count=8&hide_border=true&title_color=1F6FEB&text_color=8B949E&bg_color=0D1117" alt="Linguagens" />
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Samuelvieria&bg_color=0D1117&color=8B949E&line=1F6FEB&point=2EA043&area=true&hide_border=true&custom_title=Atividade%20dos%20%C3%BAltimos%20meses" width="98%" alt="Atividade" />
-
-</div>
-
-<br/>
-
-## 📫 Vamos conversar
-
-Estou aberto a oportunidades em **desenvolvimento de software, IoT e dados**. Se você chegou até aqui, provavelmente temos assunto.
+Aberto a oportunidades em **desenvolvimento de software, IoT e dados**. Se o problema envolve dado que não pode se perder, é o tipo de coisa que eu gosto.
 
 <div align="center">
 
 <a href="https://www.linkedin.com/in/SEU-USUARIO">
-  <img src="https://img.shields.io/badge/Chamar%20no%20LinkedIn-1F6FEB?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/Chamar%20no%20LinkedIn-0B6B8F?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:samuelalvesvieira39@gmail.com">
-  <img src="https://img.shields.io/badge/Mandar%20um%20email-2EA043?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <img src="https://img.shields.io/badge/Mandar%20um%20email-12705A?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
 </a>
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2EA043,55:1F6FEB,100:0D1117&height=120&section=footer" width="100%" alt="" />
 
 </div>
