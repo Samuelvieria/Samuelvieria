@@ -35,5 +35,5 @@
 <path d="M710,250.0 H746.0 V142" fill="none" stroke="#0B6B8F" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ac)"/>
 <text x="760.0" y="240.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" letter-spacing="0.6" fill="#0B6B8F">reenvia ao reconectar</text>
 <line x1="56" y1="304" x2="1144" y2="304" stroke="#D3DBE3" stroke-width="1"/>
-<text x="56" y="322" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.4" fill="#8494A1">TECWISE LINK — PYTHON · PAHO-MQTT · TLS · EMPACOTADO COMO INSTALADOR WINDOWS</text>
+<text x="56" y="322" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.4" fill="#8494A1">TWBRIDGE — PYTHON · PAHO-MQTT · TLS · EMPACOTADO COMO INSTALADOR WINDOWS</text>
 </svg>

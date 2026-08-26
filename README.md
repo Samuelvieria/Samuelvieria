@@ -88,41 +88,45 @@ O caminho sólido é o dia bom. O caminho tracejado é o que me interessa: **qua
 <tr>
 <td width="50%" valign="top">
 
-### Screw — gestão para oficinas
-**Flutter · Firebase · SQLite · Azure Vision**
+### [🌍 Globo Histórico Interativo](https://github.com/Samuelvieria/world-history-map)
+**React 19 · TypeScript · Three.js · Python**
 
-App mobile **offline-first** para oficinas mecânicas: clientes, veículos, ordens de serviço e orçamentos em PDF. Grava local no SQLite e sincroniza sozinho com o Firestore quando a conexão volta. Inclui **leitura de placa por câmera (OCR)**.
+Globo 3D navegável onde eventos históricos viram pontos clicáveis, com navegação **mundo → continente → país → estado** e nível de detalhe progressivo.
 
-`offline-first` · `sync` · `ocr` · `pdf`
+Alimentado por um pipeline próprio que lê livros de história em PDF **sem usar LLM generativo** — modelos encoder que só apontam trechos existentes não conseguem fabricar um fato. Medido contra dois livros inteiros: **100% de proveniência íntegra em 2053 candidatos**.
+
+[![Repo](https://img.shields.io/badge/Ver_o_código-0B6B8F?style=flat-square&logo=github&logoColor=white)](https://github.com/Samuelvieria/world-history-map)
+[![MIT](https://img.shields.io/badge/MIT-16715A?style=flat-square)](https://github.com/Samuelvieria/world-history-map/blob/master/LICENSE)
 
 </td>
 <td width="50%" valign="top">
 
-### Globo Histórico Interativo
-**React 19 · TypeScript · Three.js · Python**
+### 🔧 Screw — gestão para oficinas
+**Flutter · Firebase · SQLite · Azure Vision** · 🔒 privado
 
-Globo 3D navegável onde eventos históricos viram pontos clicáveis. Navegação hierárquica **mundo → continente → país → estado** com nível de detalhe progressivo, timeline de duas alças e tiles da NASA GIBS. Pipeline próprio de **extração de entidades (NER)** para popular a base.
+App mobile **offline-first** para oficinas mecânicas: clientes, veículos, ordens de serviço e orçamentos em PDF. Grava local no SQLite e sincroniza sozinho com o Firestore quando a conexão volta. Inclui **leitura de placa por câmera (OCR)**.
 
-`three.js` · `lod` · `nlp` · `dataviz`
+Trabalho interdisciplinar em equipe de 6, em repositório fechado da PUC Minas.
+
+`offline-first` · `sync` · `ocr` · `pdf`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### tecWise Link — telemetria confiável
-**Python · MQTT · Tkinter · PyInstaller**
+### 📡 TWBridge — telemetria confiável
+**Python · MQTT · Tkinter · PyInstaller** · 🔒 privado
 
-O pipeline do diagrama acima, em produção. Lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Distribuído como instalador Windows para equipe de campo.
+O pipeline do diagrama acima, em produção na Tecwise Latam. Lê o arquivo bruto do sensor, converte para JSON e publica via MQTT sobre TLS. Se a rede cai, **enfileira em disco e reenvia sozinho**. Distribuído como instalador Windows para equipe de campo.
 
 `mqtt` · `iot` · `fila-offline` · `desktop`
 
 </td>
 <td width="50%" valign="top">
 
-### Análise Financeira Empresarial
-*Joaz Pneus*
-**Python (stdlib pura) · SQLite**
+### 💰 Análise Financeira Empresarial
+**Python (stdlib pura) · SQLite** · 🔒 privado
 
 Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e apura **DRE, fluxo de caixa, depreciação, ponto de equilíbrio e Simples Nacional**. Aritmética em **centavos inteiros** — rateio sem perder um centavo. Zero dependências externas.
 
@@ -132,8 +136,18 @@ Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e
 </tr>
 </table>
 
+### Também no ar
+
+| Repositório | O que é |
+|---|---|
+| [**Engenharia de Software II**](https://github.com/Samuelvieria/Engenharia-De-software-II) | Sistema de biblioteca em Java — empréstimos, reservas e testes unitários com JUnit |
+| [**TP AEDS III**](https://github.com/Samuelvieria/TP_AEDSIII) | Indexação e estruturas de dados em Java |
+| [**DIW**](https://github.com/Samuelvieria/DIW) | Front-end de e-commerce em JS puro consumindo API REST |
+| [**ACI**](https://github.com/Samuelvieria/ACI) | Circuitos digitais em Verilog |
+| [**BD**](https://github.com/Samuelvieria/BD) | Modelagem relacional em MySQL e interface de acervo |
+
 <div align="center">
-<sub>Alguns projetos são privados por envolverem dados de clientes ou trabalho interno. Posso apresentá-los em conversa.</sub>
+<sub>Os projetos marcados com 🔒 envolvem dados de clientes, trabalho interno ou repositório fechado da universidade. Posso apresentá-los em conversa.</sub>
 </div>
 
 <br/>
