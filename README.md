@@ -120,7 +120,8 @@ O pipeline do diagrama acima, em produção. Lê o arquivo bruto do sensor, conv
 </td>
 <td width="50%" valign="top">
 
-### AnaliseJoaz — análise financeira
+### Análise Financeira Empresarial
+*Joaz Pneus*
 **Python (stdlib pura) · SQLite**
 
 Importa extrato OFX, classifica lançamentos por regras que o usuário ensina, e apura **DRE, fluxo de caixa, depreciação, ponto de equilíbrio e Simples Nacional**. Aritmética em **centavos inteiros** — rateio sem perder um centavo. Zero dependências externas.
