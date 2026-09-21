@@ -31,7 +31,8 @@ sobre ThingsBoard, onde implemento rule chains, alarmes e dashboards.
 
 Fora disso, construo o que me interessa — e é onde passo o tempo que sobra: um globo 3D
 que digere livros de história, um app offline-first para oficina mecânica, um sistema de
-análise financeira sem uma única dependência externa.
+análise financeira sem uma única dependência externa, o site de uma borracharia de
+caminhão que hoje está no ar.
 
 O que atravessa tudo é um gosto por software que continua correto quando as condições
 não são ideais.
@@ -89,6 +90,22 @@ Projeto meu, de ponta a ponta, hoje em produção. Lê o arquivo bruto do sensor
 Empacotado como instalador Windows, com execução em bandeja e inicialização automática, para rodar em máquina de campo sem ninguém técnico por perto.
 
 `mqtt` · `iot` · `fila-offline` · `desktop`
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+### [🛞 JOAZ Pneus — site institucional](https://joazpneus.com.br)
+**HTML · CSS · JavaScript, zero dependências** · 🔒 repo privado · 🌐 **no ar em [joazpneus.com.br](https://joazpneus.com.br)**
+
+Site de uma borracharia de caminhão na beira da BR-040, do manual de marca ao domínio publicado. Sem framework, sem build de front-end e sem uma linha de JavaScript de terceiro — é o que permite fechar a política de segurança em `script-src 'self'` e servir fontes e ícones do próprio domínio, sem entregar o IP do visitante para ninguém.
+
+O miolo é um **decodificador de medida de pneu**: lê a inscrição do flanco — `295/80 R22.5 152/148 M` no métrico, `18.4-34` no agrícola — e devolve carga em quilos, velocidade e diâmetro externo pelas tabelas ETRTO, desenhando o corte do pneu em escala real em SVG. Aceita também a marcação agrícola `147A8`, que quase nenhum conversor online lê.
+
+A publicação não copia pastas: um script **monta o pacote seguindo as referências a partir das páginas** e recusa o que não foi alcançado — documento interno, script de build e foto sem uso não têm como vazar. Testes verificam exatamente isso, junto com travessia de caminho, link simbólico e código inline.
+
+`design-system` · `csp` · `zero-deps` · `a11y` · `cloudflare-pages`
 
 </td>
 </tr>
